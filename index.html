@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.9.0/js/MicrosoftTeams.min.js" integrity="sha384-r/Z4V7kB5yg4UdzB4j1yRPg9zMupGVgVEo5F5ogp6zBo4kPiD+4Po5i49FtIlyhv" crossorigin="anonymous"></script>
 </head>
 <body>
     <script>
-        window.onload = function() {
-            // Replace the URL below with the site you want to open
-            const url = "https://www.example.com";
-            window.location.href = url;
-        };
+        microsoftTeams.initialize();
+
+        microsoftTeams.getContext((context) => {
+            const url = "https://www.example.com"; // Replace with your desired URL
+            microsoftTeams.executeDeepLink(url);
+        });
     </script>
 </body>
 </html>
