@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Open Website Button</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
 </head>
 <body>
-    <button id="openWebsiteButton" style="width:100%; height:50px; font-size:18px;">Open Website</button>
-
     <script>
-        document.getElementById("openWebsiteButton").addEventListener("click", function() {
-            var url = "https://laudamefinancials.sharepoint.com/sites/Symbisdemo2"; // Website URL
-            if (microsoftTeams) {
-                microsoftTeams.executeDeepLink(url);
-            } else {
-                window.open(url, "_blank"); // Opens in a new tab or native browser
-            }
-        });
+        window.onload = function() {
+            // Replace the URL below with the site you want to open
+            const url = "https://www.example.com";
+            window.location.href = url;
+        };
     </script>
-
-    <!-- Load Microsoft Teams SDK -->
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.8.0/js/MicrosoftTeams.min.js"></script>
 </body>
 </html>
